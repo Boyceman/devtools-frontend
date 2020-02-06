@@ -13,10 +13,10 @@
     "debugger"
   ],
   "license": "SEE LICENSE IN https://chromium.googlesource.com/chromium/src/+/master/LICENSE",
-  "name": "chrome-devtools-frontend",
+  "name": "pab-devtools-frontend",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChromeDevTools/devtools-frontend.git"
+    "url": "git+https://github.com/Boyceman/devtools-frontend.git"
   },
   "scripts": {
     "check": "npm run check-json && npm run check-gn && npm run check-license && npm run check-lint && npm run check-loc && npm run check-type",
@@ -41,6 +41,9 @@
     "start": "node scripts/hosted_mode/start_chrome_and_server.js",
     "test": "node scripts/npm_test.js",
     "test-local": "node scripts/npm_test.js --layout-tests-directory=test/webtests/",
-    "unittest": "NO_TEXT_COVERAGE=1 python scripts/test/run_unittests.py"
+    "unittest": "NO_TEXT_COVERAGE=1 python scripts/test/run_unittests.py",
+
+    "gen": "gn gen out/Default",
+    "autoninja": "autoninja -C out/Default"
   }
 }
